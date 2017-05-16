@@ -16,11 +16,9 @@ public class ScorePoints : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("testTrigger");
         if (other.tag == "Ball")
         {
             gameManager.UpScore(id);
-           // Destroy(other.gameObject);
             gameManager.RestartGame();
         }
     }

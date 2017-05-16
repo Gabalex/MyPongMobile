@@ -23,7 +23,6 @@ public class SpotBall : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            Debug.Log("testTriggerIA");
             ia.move = 1;
         }
     }
@@ -32,7 +31,6 @@ public class SpotBall : MonoBehaviour
     {
         if (other.tag == "Ball")
         {
-            Debug.Log("testTriggerIAOut");
             ia.move = 0;
         }
     }

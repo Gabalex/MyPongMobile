@@ -25,7 +25,6 @@ public class PlayerController : MonoBehaviour
             Touch myTouch = Input.GetTouch(idPlayer);
 
             //  Vector2 touchDeltaPosition = new Vector2(myTouch.position.x, ;
-            // Debug.Log(touchDeltaPosition.y);
             Vector2 vo = Camera.main.ScreenToWorldPoint(myTouch.position);
             this.GetComponent<Rigidbody>().velocity = new Vector2(0, vo.y * speed * Time.deltaTime);
         }
@@ -40,7 +39,6 @@ public class PlayerController : MonoBehaviour
         {
             Touch myTouch = Input.GetTouch(idPlayer);
             Vector2 vo = Camera.main.ScreenToWorldPoint(myTouch.position);
-            //Debug.Log(vo.y);
             if (vo.y > 4.20f)
                 vo = new Vector2(xorigin, 4.20f);
             else
